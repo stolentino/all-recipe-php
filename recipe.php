@@ -2,6 +2,12 @@
 
 class Recipe
 {
+    public $title;
+    public $ingredients = array();
+    public $instructions = array();
+    public $yield;
+    public $tag = array();
+    public $source = "Sal Peterino"
 
 }
 
