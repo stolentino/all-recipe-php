@@ -17,8 +17,16 @@ class Recipe
 }
 
 $recipe1 = new Recipe();
-echo $recipe1->source;
+//echo $recipe1->source;
 $recipe1->source = "Terry Prieto";
-echo $recipe1->source;
+//echo $recipe1->source;
+$recipe1->title = "My First Recipe";
 
-var_dump($recipe1);
+$recipe2 = new Recipe();
+$recipe2->source = "Betty Crocker";
+$recipe2->title = "My Second Recipe";
+
+echo $recipe1->displayRecipe();
+echo $recipe2->displayRecipe();
+
+//var_dump($recipe1);
