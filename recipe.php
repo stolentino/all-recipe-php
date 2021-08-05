@@ -2,12 +2,21 @@
 
 class Recipe
 {
-    public $title;
+    private $title;
     public $ingredients = array();
     public $instructions = array();
     public $yield;
     public $tag = array();
     public $source = "Sal Peterino";
+
+    public function setTitle($title)
+    {
+        $this->title = ucwords($title);
+    }
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
     public function displayRecipe()
     {
@@ -20,12 +29,13 @@ $recipe1 = new Recipe();
 //echo $recipe1->source;
 $recipe1->source = "Terry Prieto";
 //echo $recipe1->source;
-$recipe1->title = "My First Recipe";
+$recipe1->setTitle("my frst recipe");
 
 $recipe2 = new Recipe();
 $recipe2->source = "Betty Crocker";
-$recipe2->title = "My Second Recipe";
+$recipe2->setTitle("my second recipe");
 
+echo $recipe1->getTitle();
 echo $recipe1->displayRecipe();
 echo $recipe2->displayRecipe();
 
