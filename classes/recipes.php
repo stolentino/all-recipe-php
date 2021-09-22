@@ -89,9 +89,4 @@ class Recipe
         return $this->source;
     }
 
-    public function displayRecipe()
-    {
-        return $this->title . " by " . $this->source;
-    }
-
 }
