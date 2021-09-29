@@ -26,7 +26,8 @@ $recipe1->setYield("6 servings");
 //echo $recipe1->displayRecipe();
 //echo $recipe2->displayRecipe();
 echo $recipe1;
-echo Render::displayRecipe($recipe1);
+//echo Render::displayRecipe($recipe1);
+echo new Render();
 
 
 //var_dump($recipe1);
