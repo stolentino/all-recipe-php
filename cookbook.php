@@ -57,7 +57,14 @@ $cookbook->addRecipe($scones);
 //var_dump($cookbook);
 //print_r($cookbook);
 
-echo Render::listRecipes($cookbook->getRecipeTitles());
+//echo Render::listRecipes($cookbook->getRecipeTitles());
+
+$breakfast = new RecipeCollection("Favorite Breakfasts");
+foreach($cookbook->filterByTag("breakfast") as $recipe){
+    $breakfast->addRecipe($recipe);
+}
+
+echo Render::listRecipes($breakfast->getRecipeTitles());
 
 
 
