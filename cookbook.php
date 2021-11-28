@@ -31,7 +31,7 @@ include "inc/recipes.php";
 //echo Render::displayRecipe($recipe1);
 //echo new Render();
 
-echo Render::displayRecipe($belgian_waffles);
+//echo Render::displayRecipe($belgian_waffles);
 //var_dump($recipe1);
 
 $cookbook = new RecipeCollection("Treehouse Recipes");
@@ -54,5 +54,15 @@ $cookbook->addRecipe($granola);
 $cookbook->addRecipe($spicy_omelette);
 $cookbook->addRecipe($scones);
 
-var_dump($cookbook);
-print_r($cookbook);
+//var_dump($cookbook);
+//print_r($cookbook);
+
+echo Render::listRecipes($cookbook->getRecipeTitles());
+
+
+
+
+
+
+
+
