@@ -8,6 +8,12 @@ class Render
         $output .= implode("\n", get_class_methods(__CLASS__));
         return $output;
     }
+    
+    public static function listRecipes($titles)
+    {
+        asort($titles);
+        return implode("\n", $titles);
+    }
 
     public static function listIngredients($ingredients)
     {
