@@ -64,7 +64,11 @@ foreach($cookbook->filterByTag("breakfast") as $recipe){
     $breakfast->addRecipe($recipe);
 }
 
-echo Render::listRecipes($breakfast->getRecipeTitles());
+//echo Render::listRecipes($breakfast->getRecipeTitles());
+
+//echo $breakfast->getCombinedIngredients();
+echo "Shopping List\n\n";
+echo Render::listShopping($breakfast->getCombinedIngredients());
 
 
 
